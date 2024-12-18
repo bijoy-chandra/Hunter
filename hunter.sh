@@ -131,4 +131,4 @@
     nmap -iL $url/recon/httpx/alive.txt -T4 -oA $url/recon/scans/scanned.txt
     
     echo "[+] Running gowitness against all compiled domains..."
-    gowitness scan file -s $url/recon/httpx/alive.txt -d $url/recon/gowitness
+    gowitness scan file -s $url/recon/httpx/alive.txt -d $url/recon/gowitness # This is not working

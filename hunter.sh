@@ -13,9 +13,6 @@
     if [ ! -d "$url/recon" ];then
         mkdir $url/recon
     fi
-    if [ ! -d "$url/recon/gowitness" ];then
-    	mkdir $url/recon/gowitness
-    fi
     if [ ! -d "$url/recon/scans" ];then
         mkdir $url/recon/scans
     fi
@@ -130,5 +127,3 @@
     echo "[+] Scanning for open ports..."
     nmap -iL $url/recon/httpx/alive.txt -T4 -oA $url/recon/scans/scanned.txt
     
-    echo "[+] Running gowitness against all compiled domains..."
-    gowitness scan file -s $url/recon/httpx/alive.txt -d $url/recon/gowitness # This is not working
